@@ -1,0 +1,120 @@
+\documentclass[11pt]{ctexart}
+
+\usepackage{geometry}
+\geometry{
+    left = 0.6in,
+    right = 0.6in,
+    top = 0.8in,
+    bottom = 1.0in
+}
+\usepackage{amssymb,amsbsy,amsmath,xcolor,mathrsfs,graphicx}
+\usepackage{listings}
+\usepackage{tasks}
+\settasks{
+    label = \Alph*. ,
+    label-width = 16pt
+}
+\lstset{
+    language = python,
+    keywordstyle = \color{orange}\bfseries,
+    emph = {
+        abs, all, any, ascii, bin, bool, breakpoint, bytearray, bytes,
+        callable, chr, classmethod, compile, complex, copyright, credits,
+        delattr, dict, dir, divmod, enumerate, eval, exec, exit, filter,
+        float, format, frozenset, getattr, globals, hasattr, hash,
+        help, hex, id, input, int, isinstance, issubclass, iter, len,
+        license, list, locals, map, max, memoryview, min, next, object,
+        oct, open, ord, pow, print, property, quit, range, repr, reversed,
+        round, set, setattr, slice, sorted, staticmethod, str, sum, super,
+        tuple, type, vars, zip,
+    },
+    emphstyle = \color{purple}\bfseries,
+    showspaces = false,
+    basicstyle = \ttfamily,
+    morekeywords = {True,False}
+}
+
+\begin{document}
+\begin{center}
+    \Huge \heiti 参考答案
+\end{center}
+
+    \begin{tasks}[label=\arabic*.](5)
+        \task D 
+        \task B 
+        \task C 
+        \task A 
+        \task A 
+
+        \task C
+        \task B
+        \task A
+        \task D
+        \task D
+
+        \task B
+        \task C
+        \task B
+        \task C
+        \task C
+
+        \task B
+        \task A
+        \task B
+        \task C
+        \task A
+
+        \task C
+        \task B
+        \task A
+        \task A
+        \task C
+
+        \task $\times$
+        \task $\checkmark$
+        \task $\times$
+        \task $\checkmark$
+        \task $\times$
+
+        \task $\checkmark$
+        \task $\checkmark$
+        \task $\times$
+        \task $\times$
+        \task $\times$
+    \end{tasks}
+
+\begin{enumerate}
+    \setcounter{enumi}{35}
+    \item 参考程序
+    \begin{lstlisting}
+        num = int(input("请输入一个数:"))
+        baiwei = num // 100
+        shiwei = num // 10 % 10
+        gewei = num % 10
+        print("百:",baiwei,",十:"shiwei,",个:"gewei)
+    \end{lstlisting}
+
+    \item 参考程序
+    \begin{lstlisting}
+        import turtle
+
+        turtle.hideturtle()
+        turtle.penup()
+        turtle.goto(0, -50)
+        turtle.pd()
+        turtle.fillcolor("blue")
+        turtle.begin_fill()
+        turtle.circle(50)
+        turtle.end_fill()
+
+        turtle.penup()
+        turtle.goto(-100, -100)
+        turtle.pd()
+        for i in range(4):
+            turtle.fd(200)
+            turtle.left(90)
+
+        turtle.done()
+    \end{lstlisting}
+\end{enumerate}
+\end{document}
