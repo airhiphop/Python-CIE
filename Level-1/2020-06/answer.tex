@@ -1,0 +1,109 @@
+\documentclass[11pt]{ctexart}
+
+\usepackage{geometry}
+\geometry{
+    left = 0.6in,
+    right = 0.6in,
+    top = 0.8in,
+    bottom = 1.0in
+}
+\usepackage{amssymb,amsbsy,amsmath,xcolor,mathrsfs,graphicx}
+\usepackage{listings}
+\usepackage{tasks}
+\settasks{
+    label = \Alph*. ,
+    label-width = 16pt
+}
+\lstset{
+    language = python,
+    keywordstyle = \color{orange}\bfseries,
+    emph = {
+        abs, all, any, ascii, bin, bool, breakpoint, bytearray, bytes,
+        callable, chr, classmethod, compile, complex, copyright, credits,
+        delattr, dict, dir, divmod, enumerate, eval, exec, exit, filter,
+        float, format, frozenset, getattr, globals, hasattr, hash,
+        help, hex, id, input, int, isinstance, issubclass, iter, len,
+        license, list, locals, map, max, memoryview, min, next, object,
+        oct, open, ord, pow, print, property, quit, range, repr, reversed,
+        round, set, setattr, slice, sorted, staticmethod, str, sum, super,
+        tuple, type, vars, zip,
+    },
+    emphstyle = \color{purple}\bfseries,
+    showspaces = false,
+    basicstyle = \ttfamily,
+    morekeywords = {True,False}
+}
+
+\begin{document}
+\begin{center}
+    \Huge \heiti 参考答案
+\end{center}
+
+    \begin{tasks}[label=\arabic*.](5)
+        \task D
+        \task D
+        \task C
+        \task C
+        \task D
+
+        \task D
+        \task D
+        \task A
+        \task B
+        \task D
+
+        \task B
+        \task D
+        \task B
+        \task D
+        \task B
+
+        \task C
+        \task C
+        \task B
+        \task C
+        \task D
+
+        \task B
+        \task C
+        \task C
+        \task A
+        \task C
+
+        \task $\times$
+        \task $\times$
+        \task $\checkmark$
+        \task $\checkmark$
+        \task $\times$
+
+        \task $\times$
+        \task $\checkmark$
+        \task $\times$
+        \task $\times$
+        \task $\checkmark$
+    \end{tasks}
+
+\begin{enumerate}
+    \setcounter{enumi}{35}
+    \item 参考程序
+    \begin{lstlisting}
+        import turtle
+        turtle.hideturtle()
+        turtle.pencolor('red')
+        turtle.pensize(2)
+        turtle.goto(100, 0)
+        turtle.goto(-100, 0)
+        turtle.goto(0, 0)
+        turtle.goto(0, 100)
+        turtle.goto(0, -100)
+        turtle.circle(100)
+        turtle.done()
+    \end{lstlisting}
+
+    \item 参考程序
+    \begin{lstlisting}
+        N = int(input("请输入奶牛的头数："))
+        print(str(N) + "头奶牛7天可以产" + str(N * 140) + "千克的牛奶")
+    \end{lstlisting}
+\end{enumerate}
+\end{document}

@@ -1,0 +1,11 @@
+from turtle import *
+hideturtle()
+pencolor('red')
+pensize(2)
+goto(100, 0)
+goto(-100, 0)
+goto(0, 0)
+goto(0, 100)
+goto(0, -100)
+circle(100)
+done()
