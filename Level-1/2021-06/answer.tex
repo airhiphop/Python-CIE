@@ -40,46 +40,46 @@
 \end{center}
 
     \begin{tasks}[label=\arabic*.](5)
+        \task B
         \task C
         \task C
+        \task C
+        \task C
+
+        \task B
+        \task A
+        \task A
+        \task C
+        \task A
+
+        \task B
         \task D
+        \task B
+        \task B
+        \task D
+
+        \task A
+        \task A
+        \task B
         \task D
         \task A
 
         \task B
-        \task C
-        \task C
-        \task A
-        \task A
-
-        \task A
-        \task A
-        \task C
-        \task C
-        \task C
-
-        \task A
-        \task C
+        \task D
         \task B
         \task C
         \task B
 
-        \task B
-        \task B
-        \task A
-        \task C
-        \task B
+        \task $\checkmark$
+        \task $\checkmark$
+        \task $\times$
+        \task $\times$
+        \task $\times$
 
         \task $\times$
         \task $\times$
         \task $\checkmark$
         \task $\checkmark$
-        \task $\times$
-
-        \task $\times$
-        \task $\checkmark$
-        \task $\checkmark$
-        \task $\times$
         \task $\times$
     \end{tasks}
 
@@ -87,34 +87,28 @@
     \setcounter{enumi}{35}
     \item 参考程序
     \begin{lstlisting}
-        import turtle
-        turtle.penup()
-        turtle.goto(-100, -100)
-        turtle.pendown()
-        for i in range(4): # 绘制正方形
-            turtle.fd(200)
-            turtle.left(90)
-        turtle.pencolor('red')
-        x = -40
-        for i in range(3): # 绘制 3 个圆点
-            turtle.penup()
-            turtle.goto(x, 0)
-            turtle.dot(20)
-            turtle.pendown()
-            x += 40
-        turtle.hideturtle()
+        a = int(input("请输入长方形的长:"))
+        b = int(input("请输入长方形的宽:"))
+        print("长方形的周长是:", 2*(a+b))
+        print("长方形的面积是:", a*b)
     \end{lstlisting}
 
     \item 参考程序
     \begin{lstlisting}
-        ''' 
-        计算长方形的面积
-        并输出结果
-        '''
-        a = 6 # 长方形的长
-        b = 3 # 长方形的宽
-        s = a*b # 长方形的面积等于长乘以宽
-        print("长方形的面积为:", s) # 输出长方形的面积
+        import turtle
+        turtle.color('black', 'black')
+        head = 0
+        for i in range(4):
+            if i % 2 == 1:
+                turtle.begin_fill()
+            turtle.setheading(head)
+            for j in range(4):
+                turtle.fd(100)
+                turtle.left(90)
+            head += 90
+            if i % 2 == 1:
+                turtle.end_fill()
+        turtle.hideturtle()
     \end{lstlisting}
 \end{enumerate}
 \end{document}
