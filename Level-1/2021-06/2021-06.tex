@@ -10,6 +10,7 @@
 \usepackage{amssymb,amsbsy,amsmath,xcolor,mathrsfs,graphicx}
 \usepackage{listings}
 \usepackage{tasks}
+\usepackage{pifont}
 \settasks{
     label = \Alph*. ,
     label-width = 16pt
@@ -47,7 +48,7 @@
         morekeywords = {True,False}
     }
 
-    \title{2021}{3}{一}
+    \title{2021}{6}{一}
     
     \TimeAndName{60}
     
@@ -55,263 +56,303 @@
 
     \begin{enumerate}
         % 1
-        \item 下列哪个操作不能退出 IDLE 环境?(\qquad)
+        \item 下列程序运行的结果是?(\qquad)
+        \begin{lstlisting}
+            s = 'hello'
+            print(s + 'world')
+        \end{lstlisting}
         \begin{tasks}(4)
-            \task Alt + F4
-            \task Ctrl + Q
-            \task 按 ESC 键
-            \task \lstinline{exit()}
+            \task \lstinline{sworld}
+            \task \lstinline{helloworld}
+            \task \lstinline{hello}
+            \task \lstinline{world}
         \end{tasks}
     
-
         % 2
-        \item \lstinline!print(4 + 8 // 2)! 的输出结果是?(\qquad)
+        \item 下列选项中不符合Python语言变量命名规则的是?(\qquad)
         \begin{tasks}(4)
-            \task 6
-            \task 6.0
-            \task 8
-            \task 8.0
+            \task \lstinline{Computer}
+            \task \lstinline{P}
+            \task \lstinline{3\_1}
+            \task \lstinline{\_WO1}
         \end{tasks}
 
         % 3
-        \item 下列哪个软件不能进行 Python 代码编写?(\qquad)
+        \item 在 Python 中，运行 \lstinline!9//2! ，输出的结果是?(\qquad)
         \begin{tasks}(4)
-            \task IDLE
-            \task PyCharm
-            \task Visual~Studio~Code
-            \task WPS
+            \task $3$
+            \task $4.5$
+            \task $4$
+            \task $4.0$
         \end{tasks}
     
         % 4
-        \item 下列哪个符号可以用来修改变量的值?(\qquad)
-        \begin{tasks}(4)
-            \task \lstinline{>=}
-            \task \lstinline{<=}
-            \task \lstinline{==}
-            \task \lstinline{=}
+        \item 下面哪一行代码的输出结果不是 \lstinline{World2021} ?(\qquad)
+        \begin{tasks}
+            \task \lstinline!print("World" + "2021")!
+            \task \lstinline!print("World" + "20"+"21")!
+            \task \lstinline!print("World" + 2021)!
+            \task \lstinline!print("World2021")!
         \end{tasks}
 
         % 5
-        \item 关于\lstinline!print()!语句，下列选项能够正确输出的是?(\qquad)
-        \begin{tasks}(2)
-            \task \lstinline{print('hello!,2021年！')}
-            \task \lstinline{print 'hello!,2021年！'}
-            \task \lstinline{print"(hello!,2021年!)"}
-            \task \lstinline{print("hello!,2021年!')}
+        \item 在Python中，输入 \lstinline!3 * 4 ** 2! ，运算结果是?(\qquad)
+        \begin{tasks}(4)
+            \task 144
+            \task 24
+            \task 48
+            \task 6
         \end{tasks}
 
         % 6
-        \item 运行下列代码，\lstinline{d} 输出的结果是?(\qquad)
-        \begin{lstlisting}
-            a, b, c = 23, 13, 3
-            d = (a + b) - c * c
-        \end{lstlisting}
+        \item 关于比较运算符说法正确的是?(\qquad)
+        
+        \ding{172} \lstinline{!=} 表示为不等于，如果两个操作数不相等，则为 \lstinline{False}
+
+        \ding{173} \lstinline{<=} 表示为小于等于，如果左边的数小于或等于右边的数，则为 \lstinline{True}
+
+        \ding{174} 若\lstinline{a = 2}, \lstinline{b = 5} 则 \lstinline{a != b} 为 \lstinline{True}
         \begin{tasks}(4)
-            \task 22
-            \task 27
-            \task 99
-            \task 9
+            \task \ding{172}\ding{173}
+            \task \ding{173}\ding{174}
+            \task \ding{172}\ding{174}
+            \task \ding{172}\ding{173}\ding{174}
         \end{tasks}
 
         % 7
-        \item 下列代码段的结果是?(\qquad)
-        \begin{lstlisting}
-            star_number1 = "star2"
-            star_number2 = "star3"
-            print(star_number1 + star_number2)
-        \end{lstlisting}
+        \item Python中的乘法是用哪个符号表示的?(\qquad)
         \begin{tasks}(4)
-            \task \lstinline{star5}
-            \task \lstinline{star3star2}
-            \task \lstinline{star2star3}
-            \task \lstinline{star23}
+            \task \lstinline!*!
+            \task \lstinline!X!
+            \task \lstinline!x!
+            \task \lstinline!\#!
         \end{tasks}
 
         % 8
-        \item Python中的余数运算符是用哪个符号表示的?(\qquad)
+        \item 以下哪个选项可以作为Python文件的后缀名?(\qquad)
         \begin{tasks}(4)
-            \task \%
-            \task /
-            \task //
-            \task \lstinline!\\\\!
+            \task .py
+            \task .png
+            \task .doc
+            \task .pdf
         \end{tasks}
 
         % 9
-        \item 下列运算中，运算结果为 \lstinline!True! 的是?(\qquad)
+        \item 要给三个整型变量a、b、c赋值为5，下面Python程序正确的是?(\qquad)
         \begin{tasks}(4)
-            \task \lstinline!2>3 and 3>2!
-            \task \lstinline{4=!0 and 3+2>=5}
-            \task \lstinline!3**2<8 or 3+2<5!
-            \task \lstinline!not 20>=20!
+            \task \lstinline!abc=5!
+            \task \lstinline{a=5,b=5,c=5}
+            \task \lstinline!a=b=c=5!
+            \task \lstinline!a=5 b=5 c=5!
         \end{tasks}
 
         % 10
-        \item 在turtle库中的指令，执行以下代码指令后，画笔为以下哪种状态?(\qquad)
-        \begin{lstlisting}
-            import turtle
-            turtle.color('pink')
-            turtle.pensize(5)
-        \end{lstlisting}
+        \item 以下哪段程序能在画出三角形并隐藏turtle?(\qquad)
         \begin{tasks}(2)
-            \task 画笔颜色为粉色，画笔宽度为5
-            \task 画笔颜色为黄色，画笔宽度为5
-            \task 画布背景为粉色，画笔宽度为5
-            \task 画笔颜色为粉色，画笔速度为5
+            \task 
+            \lstinline!import turtle! \\ 
+            \lstinline!turtle.circle(150, steps=3)! \\
+            \lstinline!turtle.hideturtle()! \\
+            \lstinline!turtle.done()!
+
+            \task 
+            \lstinline!import turtle! \\ 
+            \lstinline!turtle.circle(150, 3)! \\
+            \lstinline!turtle.hideturtle()! \\
+            \lstinline!turtle.done()!
+
+            \task 
+            \lstinline!import turtle! \\ 
+            \lstinline!turtle.circle(3)! \\
+            \lstinline!turtle.hideturtle()! \\
+            \lstinline!turtle.done()!
+
+            \task \lstinline!import turtle! \\ 
+            \lstinline!turtle.circle(150,3,3)! \\
+            \lstinline!turtle.hideturtle()! \\
+            \lstinline!turtle.done()!
         \end{tasks}
 
         % 11
-        \item 下列代码的运行结果是?(\qquad)
-        \begin{lstlisting}
-            import turtle
-            turtle.color('red')
-            turtle.circle(100)
-            turtle.fillcolor('yellow')
-            turtle.begin_fill()
-            turtle.circle(100,steps = 6)
-            turtle.end_fill()
-        \end{lstlisting}
-        \begin{tasks}(4)
-            \task \includegraphics[width=.1\textwidth]{11a.png}
-            \task \includegraphics[width=.1\textwidth]{11b.png}
-            \task \includegraphics[width=.1\textwidth]{11c.png}
-            \task \includegraphics[width=.1\textwidth]{11d.png}
+        \item \lstinline{turtle.home()} 的作用是下列哪一种?(\qquad)
+        \begin{tasks}(2)
+            \task 移至初始坐标 (0,0)
+            \task 移至初始坐标 (0,0)，并设置朝向为初始方向
+            \task 移至屏幕左上角
+            \task 设置朝向为初始方向
         \end{tasks}
 
         % 12
-        \item 下列哪一段代码是海龟走到指定坐标然后左转90度?(\qquad)
-        \begin{tasks}(4)
-            \task \lstinline!turtle.goto(90,0)! \\ \lstinline!turtle.left(90)!
-            \task \lstinline!turtle.left(90)! \\ \lstinline!turtle.goto(90,0)!
-            \task \lstinline!turtle.goto(90,0)! \\ \lstinline!turtle.right(90)!
-            \task \lstinline!turtle.right(90)! \\ \lstinline!turtle.goto(90,0)!
+        \item 关于Turtle绘图，下列说法错误的是?(\qquad)
+        \begin{tasks}
+            \task 色彩处理时，可以使用彩色画笔 \lstinline{pencolor()}，也可以直接由 \lstinline{color()} 方法更改目前画笔的颜色
+            \task \lstinline{penup()} 指的是将笔提起，不会绘制任何图形
+            \task 在选择画笔粗细时可以使用 \lstinline{pensize()}
+            \task 在海龟绘图中，画布中央是(0，0)，往右$x$坐标值递减，往左$x$坐标值递增
         \end{tasks}
 
         % 13
-        \item 下列关于turtle库的描述不正确的是?(\qquad)
-        \begin{tasks}(2)
-            \task 画笔的初始坐标为(0,0)
-            \task turtle.color()可以设置画笔的颜色
-            \task 画笔绘制的速度没有范围
-            \task turtle.fillcolor()设置绘制图形的填充颜色
+        \item  在Python中，输入 \lstinline!18 / 6 // 3!，输出结果为?(\qquad)
+        \begin{tasks}(4)
+            \task 1
+            \task 1.0
+            \task 9
+            \task 9.0
         \end{tasks}
 
         % 14
-        \item 同学们排队做操，按名单顺序，每10个人一排，要问第n个人是第几排，下列哪一种方法可以实现?(\qquad)
+        \item \lstinline!print(88 - 8)! 的运行结果是?(\qquad)
         \begin{tasks}(4)
-            \task \lstinline!n//10!
-            \task \lstinline!n\%10!
-            \task \lstinline!(n-1)//10+1!
-            \task \lstinline!(n-1)\%10+1!
+            \task $88$
+            \task $80$
+            \task $88-8$
+            \task $81$
         \end{tasks}
         
+        \newpage
         % 15
-        \item 在Python IDLE中输入\lstinline!print('Hello');print('I am Python');!,并将这两个语句写在一行，试分析，程序的运行结果是以下哪个选项?(\qquad)
-        \begin{tasks}(4)
-            \task \lstinline!Hello!
-            \task \lstinline!I am Python!
-            \task \lstinline!Hello! \\ \lstinline!I am Python!
-            \task 语法错误
+        \item 分析下列程序，说法错误的是?(\qquad)
+        \begin{lstlisting}
+            import turtle
+            turtle.color('blue')
+            turtle.fillcolor('yellow')
+            turtle.begin_fill()
+            turtle.circle(50)
+            turtle.end_fill()
+            turtle.forward(100)
+            turtle.color('red', 'aqua')
+            turtle.begin_fill()
+            turtle.circle(50)
+            turtle.end_fill()
+        \end{lstlisting}
+        \begin{tasks}
+            \task turtle.color('blue')表示的含义为:设置轮廓和填充颜色均为"blue"
+            \task turtle.fllcolor('yellow')表示的含义为:设置填充颜色为"yellow"
+            \task 程序运行结果为:绘制两个圆，左边圆填充颜色为"yellow"，右边圆的颜色为"aqua"
+            \task 最终绘制两个圆的轮廓颜色均为"blue"
         \end{tasks}
 
-        \newpage
         % 16
-        \item 下列哪个命令可以将整个绘制屏幕的颜色设置成黑色?(\qquad)
-        \begin{tasks}(2)
-            \task \lstinline!turtle.screensize("black")!
-            \task \lstinline!turtle.fillcolor("black")!
-            \task \lstinline!turtle.bgcolor("black")!
-            \task \lstinline!turtle.pencolor("black")!
+        \item Python环境中，以下代码注释正确的是?(\qquad)
+        \begin{tasks}(4)
+            \task \lstinline!\#! 这个是一个程序
+            \task \lstinline!/这个是一个程序/!
+            \task \lstinline!"这是一个程序'!
+            \task \lstinline!?这是一个程序?!
         \end{tasks}
 
         % 17
-        \item 执行\lstinline!print(3>2 or 4<5)!的结果是?(\qquad)
+        \item \lstinline!print(5 % 10 + 5)! 的输出结果是?(\qquad)
         \begin{tasks}(4)
-            \task 1
-            \task 0
-            \task True
-            \task False
+            \task 10
+            \task 1/3
+            \task 5.2
+            \task 5
         \end{tasks}
 
         % 18
-        \item 下列哪个选项的运算优先级最高?(\qquad)
+        \item 下列哪一个函数可以将海龟顺时针旋转?(\qquad)
         \begin{tasks}(4)
-            \task \lstinline{==}
-            \task \lstinline{*}
-            \task \lstinline{and}
-            \task \lstinline{+}
+            \task \lstinline{left()}
+            \task \lstinline{right()}
+            \task \lstinline{back()}
+            \task \lstinline{forward()}
         \end{tasks}
 
         % 19
-        \item 为变量命名，并赋值为数字1，以下选项中，不符合要求的是?(\qquad)
+        \item 在Python编程环境下，IDLE代表什么?(\qquad)
         \begin{tasks}(4)
-            \task \lstinline!abc = 1!
-            \task \lstinline!HelloWorld = 1!
-            \task \lstinline!1abc = 1!
-            \task \lstinline!abc_xyz = 1!
+            \task 编辑器
+            \task 编译器
+            \task 计算器
+            \task 集成开发环境
         \end{tasks}
 
         % 20
-        \item 已知变量a = 5，执行下列哪个代码后，a的值为10?(\qquad)
+        \item 如果某年的第1天也就是一月一日是星期一。星期一记作1，星期二记作2，以此类推，星期日记作0。要求这一年的第d天是星期几，下列哪一种方法可以实现?(\qquad)
         \begin{tasks}(4)
-            \task \lstinline!a >= a + 5!
-            \task \lstinline!a += a + 5!
-            \task \lstinline!a == a + 5!
-            \task \lstinline!a *= a + 5!
-        \end{tasks}
-
-        % 21
-        \item 下列可以用作多行注释的是?(\qquad)
-        \begin{tasks}(4)
-            \task 前后加 \lstinline!//!
-            \task 前后加 \lstinline!\'\'\'!
-            \task 前后加 \lstinline!***!
-            \task 前后加 \lstinline!\#\#\#!
-        \end{tasks}
-
-        % 22
-        \item \lstinline!turtle.circle(90, 180)!是绘制一个什么样的图形?(\qquad)
-        \begin{tasks}(4)
-            \task 半径为180的扇形
-            \task 半径为90的半圆
-            \task 半径为90的圆形
-            \task 半径为180的圆形
-        \end{tasks}
-
-        % 23
-        \item 下列代码执行后最有可能绘制出哪个图形?(\qquad)
-        \begin{lstlisting}
-            import turtle
-            turtle.forward(100)
-            turtle.right(90)
-            turtle.forward(100)
-            turtle.right(45)
-            turtle.goto(0,0)
-            turtle.hideturtle()
-        \end{lstlisting}
-        \begin{tasks}(4)
-            \task \includegraphics[width=.1\textwidth]{23a.png}
-            \task \includegraphics[width=.1\textwidth]{23b.png}
-            \task \includegraphics[width=.1\textwidth]{23c.png}
-            \task \includegraphics[width=.1\textwidth]{23d.png}
+            \task \lstinline!d\%7!
+            \task \lstinline!(d-1)\%7!
+            \task \lstinline!(d-1)\%7+1!
+            \task \lstinline!(d+1)\%7!
         \end{tasks}
 
         \newpage
+        % 21
+        \item 在初始状态下，执行以下命令后，turtle的坐标为?(\qquad)
+        \begin{lstlisting}
+            turtle.forward(10)
+            turtle.left(90)
+            turtle.forward(20)
+        \end{lstlisting}
+        \begin{tasks}(4)
+            \task $(10,0)$
+            \task $(10,20)$
+            \task $(10,30)$
+            \task $(10,-20)$
+        \end{tasks}
+
+        % 22
+        \item 下列运算符中，哪一个不是比较运算符?(\qquad)
+        \begin{tasks}(4)
+            \task \lstinline{<}
+            \task \lstinline{>}
+            \task \lstinline{!=}
+            \task \lstinline{=}
+        \end{tasks}
+
+        % 23
+        \item 运行如下代码段，输出结果正确的是?(\qquad)
+        \begin{lstlisting}
+            word1  = "o"
+            word2 = "n"
+            print(word2 +word1)
+        \end{lstlisting}
+        \begin{tasks}(4)
+            \task \lstinline{on}
+            \task \lstinline{no}
+            \task \lstinline{word3}
+            \task \lstinline{word2word1}
+        \end{tasks}
+
         % 24
-        \item 关于Python，下列哪个表述是正确的?(\qquad)
-        \begin{tasks}
-            \task Python只可以在windows系统中使用
-            \task 在Windows系统中编写的程序不可以在Linux或者IOS系统中打开
-            \task Python目前存在Python 2 和Python 3 两个版本，但并不完全兼容
-            \task 32位的电脑系统可支持安装64位版本的Python软件
+        \item 下面哪一个不是Python的保留字?(\qquad)
+        \begin{tasks}(4)
+            \task class
+            \task if
+            \task turtle
+            \task or
         \end{tasks}
 
         % 25
-        \item \lstinline!print(6+8/2)!输出的结果是?(\qquad)
-        \begin{tasks}(4)
-            \task 7
-            \task 10.0
-            \task 10
-            \task 7.0
+        \item 下面哪个代码可以绘制一个直径为200的填充为红色，轮廓为蓝边的圆形?(\qquad)
+        \begin{tasks}(2)
+            \task 
+            \lstinline!import turtle! \\
+            \lstinline!turtle.pencolor("blue")! \\
+            \lstinline!turtle.fillcolor("red")! \\
+            \lstinline!turtle.begin_fill()! \\
+            \lstinline!turtle.circle(200)! \\
+            \lstinline!turtle.end_fill()!
+
+            \task
+            \lstinline!import turtle! \\
+            \lstinline!turtle.pencolor("blue")! \\
+            \lstinline!turtle.fillcolor("red")! \\
+            \lstinline!turtle.begin_fill()! \\
+            \lstinline!turtle.circle(100,360)! \\
+            \lstinline!turtle.end_fill()!
+
+            \task 
+            \lstinline!import turtle! \\
+            \lstinline!turtle.color("blue")! \\
+            \lstinline!turtle.dot(200)! 
+
+            \task
+            \lstinline!import turtle! \\
+            \lstinline!turtle.pencolor("blue")! \\
+            \lstinline!turtle.fillcolor("red")! \\
+            \lstinline!turtle.dot(100)! 
         \end{tasks}
     \end{enumerate}
 
@@ -319,82 +360,73 @@
     \begin{enumerate}
         \setcounter{enumi}{25}
         % 26
-        \item 以下三种表示字符串的方式都是正确的(\qquad)
-        \begin{lstlisting}
-            "Hello"
-            '不错'
-            "我们一起走吧'
-        \end{lstlisting}
+        \item \lstinline{name = "John"}，这个赋值语句书写正确(\qquad)
 
         %27
-        \item 设置画布背景颜色只有 \lstinline!turtle.bgcolor()! 一种方法(\qquad)
+        \item 执行 \lstinline{turtle.hideturtle()} 命令隐藏海龟之后，再怎么移动也就不能在画布上画图了(\qquad)
         
         %28
-        \item 在IDLE中，要新建Python脚本，在菜单里可以依次选择File->New File 即可新建Python脚本(\qquad)
+        \item \lstinline!65 - 2 * 2 == 126! 运行结果为 \lstinline{True}.(\qquad)
   
         %29
-        \item 在用IDLE脚本方式编写程序时，可以用ctrl+s快捷键保存代码(\qquad)
+        \item 一个字符串可以转化为任意数值(\qquad)
         
         %30
-        \item 12number、my~number、my\_number都是有效的变量名(\qquad)
+        \item 运行 \lstinline{turtle.clear()} 命令，将清空turtle窗口中的内容，turtle的位置会重置到窗口中央.(\qquad)
         
         %31
-        \item 在Python的编程环境中，缩进的空格数是可以改变的，同一个代码块可以有不相同的缩进空格数(\qquad)
+        \item Python中，“==”代表的是将左右两边的值进行比较，取平均值(\qquad)
         
         %32
-        \item 每一个变量在使用前都必须赋值，赋值以后该变量才会被创建(\qquad)
+        \item Word软件也可以用来编辑Python程序代码，也支持代码的调试和运行(\qquad)
         
         %33
-        \item  Turtle库属于图形绘制函数库(\qquad)
+        \item 在Python编程环境中，\lstinline!>>>! 提示符表示进入Python交互式命令行编程模式(\qquad)
         
         %34
-        \item 在Python中，编程语言是不区分大小写的，如: \lstinline{print()} 是打印函数，\lstinline{Print()} 也是打印函数(\qquad)
+        \item Python3中的单引号\lstinline{' '}和双引号 \lstinline{" "} 的作用是一样的(\qquad)
         
         %35
-        \item 以下代码可以计算出2030年时的年龄(\qquad)
+        \item 运行以下代码时会提示出错(\qquad)
         \begin{lstlisting}
-            year = input("请输入您的出生年份：")
-            print("到了2030年，您的年龄是：", 2030-year)
+            Python = "3.5.2"
+            print(Python)
         \end{lstlisting}
     \end{enumerate}
 
-    \newpage
     {\noindent\heiti 第三部分、编程题(共 2 题,共30分.)}
     \begin{enumerate}
         \setcounter{enumi}{35}
         
         % 36
-        \item 绘制如下图形，一个正方形，内有三个红点，中间红点在正方形中心.要求如下:
-        \begin{figure}[htbp]
-            \begin{minipage}{.68\textwidth}
-                \begin{tasks}[label=(\arabic*)]
-                    \task 正方形边长为200，线条为黑色；
-                    \task 圆点的直径均为20 ，填充颜色为红色,画完后隐藏画笔；
-                    \task 中间圆点的圆心位置为画布正中心,三个圆心之间距离相隔为40.
-                \end{tasks}
-            \end{minipage}
-            \begin{minipage}{.3\textwidth}
-                \centering
-                \includegraphics[width=.4\textwidth]{36.png}
-            \end{minipage}
-        \end{figure}
+        \item 求长方形的面积与周长.要求如下:
+        \begin{tasks}[label=(\arabic*)]
+            \task 程序开始运行后，输入长方形的长（a），然后再输入长方形的宽（b）；
+            \task 程序会根据输入的数字给出长方形的面积和长方形的周长；
+            \task 输出长方形的面积和周长，并且注明是面积还是和周长.
+        \end{tasks}
         \vfill
 
         %37
-        \item 写一个计算长方形面积的程序，并对每行代码进行相应的注释，要求如下：
+        \item 绘制如下图形，相关参数及要求如下：
         
-        \begin{tasks}[label=(\arabic*)]
-            \task 采用多行注释，说明程序的功能（如下）：
-            
-            “计算长方形的面积
-            
-            并输出结果”；
-
-            \task 设置第1个变量：用“a”表示长方形的长，并赋值为6；使用单行注释说明程序的功能；
-            \task 设置第2个变量：用“b”表示长方形的宽，并赋值为3；使用单行注释说明程序的功能；
-            \task 设置第3个变量：用“s”表示长方形的面积，并体现运算公式，使用单行注释说明程序功能；
-            \task 输出长方形的面积，运行结果格式为：“长方形的面积为：”并使用单行注释说明程序功能。
-        \end{tasks}
+        \begin{figure}[htbp]
+            \begin{minipage}{.6\textwidth}
+                \begin{tasks}[label=(\arabic*)]
+                    \task 画笔起始位置不限，但是整个图形必须要能够在画布中呈现；
+                    \task 大的正方形由四个小正方形组成；
+                    \task 每个小正方形的边长均为100像素；
+                    \task 左上角和右下角的正方形填充颜色均为黑色；
+                    \task 所有的线条颜色均为黑色；
+                    \task 绘制完成后，隐藏画笔.
+                \end{tasks}
+            \end{minipage}
+            \begin{minipage}{.35\textwidth}
+                \centering
+                \includegraphics[width=.6\textwidth]{37.png}
+            \end{minipage}
+        \end{figure}
+        
         \vfill
     \end{enumerate}
 \end{document}
