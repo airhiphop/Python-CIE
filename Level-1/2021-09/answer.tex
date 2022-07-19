@@ -41,45 +41,45 @@
 
     \begin{tasks}[label=\arabic*.](5)
         \task B
+        \task A
         \task C
-        \task C
-        \task C
-        \task C
-
         \task B
-        \task A
-        \task A
-        \task C
         \task A
 
         \task B
         \task D
-        \task B
-        \task B
-        \task D
-
-        \task A
-        \task A
-        \task B
-        \task D
-        \task A
-
-        \task B
-        \task D
-        \task B
         \task C
         \task B
+        \task C
+
+        \task C
+        \task B
+        \task D
+        \task A
+        \task A
+
+        \task B
+        \task D
+        \task D
+        \task C
+        \task D
+
+        \task D
+        \task C
+        \task D
+        \task D
+        \task C
+
+        \task $\checkmark$
+        \task $\checkmark$
+        \task $\times$
+        \task $\checkmark$
+        \task $\checkmark$
 
         \task $\checkmark$
         \task $\checkmark$
         \task $\times$
         \task $\times$
-        \task $\times$
-
-        \task $\times$
-        \task $\times$
-        \task $\checkmark$
-        \task $\checkmark$
         \task $\times$
     \end{tasks}
 
@@ -87,28 +87,28 @@
     \setcounter{enumi}{35}
     \item 参考程序
     \begin{lstlisting}
-        a = int(input("请输入长方形的长:"))
-        b = int(input("请输入长方形的宽:"))
-        print("长方形的周长是:", 2*(a+b))
-        print("长方形的面积是:", a*b)
+        v = int(input("请输入乌龟爬行的速度，输入一个数字："))
+        print("乌龟能够追上兔子所需的时间是：", 100 / v, "秒。")
     \end{lstlisting}
 
     \item 参考程序
     \begin{lstlisting}
         import turtle
-        turtle.color('black', 'black')
-        head = 0
+        turtle.color("black", "red")
         for i in range(4):
-            if i % 2 == 1:
-                turtle.begin_fill()
-            turtle.setheading(head)
-            for j in range(4):
-                turtle.fd(100)
-                turtle.left(90)
-            head += 90
-            if i % 2 == 1:
-                turtle.end_fill()
+            turtle.fd(200)
+            turtle.left(90)
+        turtle.penup()
+        turtle.goto(100,0)
+        turtle.pendown()
+        turtle.begin_fill()
+        turtle.goto(200,100)
+        turtle.goto(100,200)
+        turtle.goto(0,100)
+        turtle.goto(100,0)
+        turtle.end_fill()
         turtle.hideturtle()
+        turtle.done()
     \end{lstlisting}
 \end{enumerate}
 \end{document}
