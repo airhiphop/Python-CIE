@@ -1,0 +1,395 @@
+\documentclass[11pt]{ctexart}
+
+\usepackage{geometry}
+\geometry{
+    left = 0.6in,
+    right = 0.6in,
+    top = 0.8in,
+    bottom = 1.0in
+}
+\usepackage{amssymb,amsbsy,amsmath,xcolor,mathrsfs,graphicx}
+\usepackage{listings}
+\usepackage{tasks}
+\usepackage{pifont}
+\settasks{
+    label = \Alph*. ,
+    label-width = 16pt
+}
+
+\renewcommand{\title}[3]{
+    \begin{center}
+        \Large\heiti 中国电子学会 #1~年~#2~月 Python~#3级考试
+    \end{center}
+}
+\newcommand{\TimeAndName}[1]{
+    \begin{center}
+        考试时间:~#1~ 分钟 \qquad\qquad\qquad\qquad 姓名:\underline{\quad\quad\quad\quad}
+    \end{center}
+}
+
+\begin{document}
+    \lstset{
+        language = python,
+        keywordstyle = \color{orange}\bfseries,
+        emph = {
+            abs, all, any, ascii, bin, bool, breakpoint, bytearray, bytes,
+            callable, chr, classmethod, compile, complex, copyright, credits,
+            delattr, dict, dir, divmod, enumerate, eval, exec, exit, filter,
+            float, format, frozenset, getattr, globals, hasattr, hash,
+            help, hex, id, input, int, isinstance, issubclass, iter, len,
+            license, list, locals, map, max, memoryview, min, next, object,
+            oct, open, ord, pow, print, property, quit, range, repr, reversed,
+            round, set, setattr, slice, sorted, staticmethod, str, sum, super,
+            tuple, type, vars, zip,
+        },
+        emphstyle = \color{purple}\bfseries,
+        showspaces = false,
+        basicstyle = \ttfamily,
+        morekeywords = {True,False}
+    }
+
+    \title{2021}{9}{一}
+    
+    \TimeAndName{60}
+    
+    {\noindent\heiti 第一部分、单选题(共 25 题,每题 2 分,共50分.)}
+
+    \begin{enumerate}
+        % 1
+        \item 取整除的运算符是?(\qquad)
+        \begin{tasks}(4)
+            \task /
+            \task //
+            \task $\div$
+            \task $**$
+        \end{tasks}
+    
+        % 2
+        \item 下面的程序为海龟绘制正方形的程序，请选择正确的选项将程序补全?(\qquad)
+        \begin{lstlisting}
+            import turtle
+            turtle.forward(100)
+            turtle.left(90)
+            turtle.forward(100)
+            turtle.left(90)
+            turtle.forward(100)
+            turtle.left(90)
+            turtle.forward(    )
+            turtle.left(90)
+        \end{lstlisting}
+        \begin{tasks}(4)
+            \task $90$
+            \task $-90$
+            \task $0$
+            \task $100$
+        \end{tasks}
+
+        % 3
+        \item 已知\lstinline{a = 5}, \lstinline{a *= 2}, 那么 \lstinline!print(a)! 的结果为?(\qquad)
+        \begin{tasks}(4)
+            \task 5
+            \task 2
+            \task 10
+            \task 20
+        \end{tasks}
+    
+        % 4
+        \item Python程序保存后的扩展名是?(\qquad)
+        \begin{tasks}(4)
+            \task .pyt
+            \task .py
+            \task .pn
+            \task .ph
+        \end{tasks}
+
+        % 5
+        \item 关于turtle，以下描述错误的是?(\qquad)
+        \begin{tasks}(2)
+            \task turtle中的画笔不能设置不同的形状
+            \task turtle中的画笔可以设置移动的速度
+            \task turtle中的画笔可以设置不同的颜色
+            \task turtle中的画笔可以设置不同的大小
+        \end{tasks}
+
+        % 6
+        \item 运行以下代码的结果是?(\qquad)
+        \begin{lstlisting}
+            print(2021<=2020 or 2022>2018)
+        \end{lstlisting}
+        \begin{tasks}(4)
+            \task False
+            \task True
+            \task 20212018
+            \task 2022>2018
+        \end{tasks}
+
+        % 7
+        \item \lstinline!print("17+2")!输出的结果是?(\qquad)
+        \begin{tasks}(4)
+            \task \lstinline!"17+2"!
+            \task 19
+            \task 172
+            \task 17+2
+        \end{tasks}
+
+        \newpage
+        % 8
+        \item \lstinline!turtle.goto(x,y)!的含义为下列选项的哪一个?(\qquad)
+        \begin{tasks}
+            \task 以目前坐标为原点，画一个边长为$x$和$y$的矩形
+            \task 画笔提笔，移动到$x,y$的位置
+            \task 按照现在画笔状态，将画笔移动到坐标为$x,y$的位置
+            \task 将目前原点移动到 $x,y$的位置 
+        \end{tasks}
+
+        % 9
+        \item \lstinline!turtle.circle(150, steps=5)!命令能绘制出以下哪个图形?(\qquad)
+        \begin{tasks}
+            \task 直径(从顶点到图形中心的距离的2倍)为150像素的圆内接正五边形
+            \task 半径(从顶点到图形的中心)为150像素的圆内接正五边形
+            \task 半径(从顶点到图形的中心)为150像素的圆内接五角星
+            \task 边长为150像素的正五边形
+        \end{tasks}
+
+        % 10
+        \item 关于Python的编程环境，下列表述是错误的是?(\qquad)
+        \begin{tasks}(2)
+            \task Python有多种编程环境
+            \task Python自带的编程环境是IDLE
+            \task Python的编程是纯图形化的
+            \task Python可以导入多个第三方库
+        \end{tasks}
+
+        % 11
+        \item 下面哪一条命令是用来定义画笔宽度的?(\qquad)
+        \begin{tasks}(4)
+            \task \lstinline!turtle.pencolor()!
+            \task \lstinline!turtle.speed()!
+            \task \lstinline!turtle.pensize()!
+            \task \lstinline!turtle.shape()!
+        \end{tasks}
+
+        % 12
+        \item 请观察以下数字的规律：$2+6,3+8,4+10,(\quad),6+14$，请问括号中应该填写什么?(\qquad)
+        \begin{tasks}(4)
+            \task 5+11
+            \task 5+12
+            \task 4+9
+            \task 6+13
+        \end{tasks}
+
+        % 13
+        \item  海龟绘图时，使用 \lstinline{speed(n)}，当 \lstinline{n} 的值是多少时，绘图的速度最快?(\qquad)
+        \begin{tasks}(4)
+            \task 3
+            \task 2
+            \task 1
+            \task 0
+        \end{tasks}
+
+        % 14
+        \item \lstinline!print(51 % 10)! 输出的结果是?(\qquad)
+        \begin{tasks}(4)
+            \task 1
+            \task 0
+            \task True
+            \task False
+        \end{tasks}
+        
+        % 15
+        \item 下列哪个函数的功能是进行输出?(\qquad)
+        \begin{tasks}(4)
+            \task print()
+            \task input()
+            \task get()
+            \task range()
+        \end{tasks}
+
+        % 16
+        \item \lstinline!print(4+6*2+8)!的结果是?(\qquad)
+        \begin{tasks}(4)
+            \task 100
+            \task 24
+            \task 64
+            \task 28
+        \end{tasks}
+
+        % 17
+        \item 下面\lstinline!print()!语句，哪一个是正确的用法?(\qquad)
+        \begin{tasks}(4)
+            \task \lstinline{print"(welcome!)"}
+            \task \lstinline{print("welcome"!)}
+            \task \lstinline{print("welcome!')}
+            \task \lstinline{print("welcome!")}
+        \end{tasks}
+
+        % 18
+        \item \lstinline{turtle} 回到原点的命令是?(\qquad)
+        \begin{tasks}(4)
+            \task \lstinline{hideturtle()}
+            \task \lstinline{clear()}
+            \task \lstinline{circle()}
+            \task \lstinline{home()}
+        \end{tasks}
+
+        % 19
+        \item 逻辑运算符中(注意不是所有的运算符，只是逻辑运算符)，优先级最高的是?(\qquad)
+        \begin{tasks}(4)
+            \task or
+            \task and
+            \task not
+            \task $**$
+        \end{tasks}
+
+        % 20
+        \item 观察下面的程序，运行结果为?(\qquad)
+        \begin{lstlisting}
+            a = 8
+            a += 1
+            print(a)
+            a *= 10
+            print(a)
+            a **= 2
+            print(a)
+        \end{lstlisting}
+        \begin{tasks}(4)
+            \task 9
+            \task 90
+            \task 8100
+            \task 9 \\ 90 \\ 8100
+        \end{tasks}
+
+        % 21
+        \item 运行以下代码的结果是?(\qquad)
+        \begin{lstlisting}
+            a = "Python2"
+            b = "Python3"
+            c=a+b
+            print(c)
+        \end{lstlisting}
+        \begin{tasks}(4)
+            \task 5
+            \task Python5
+            \task c
+            \task Python2Python3
+        \end{tasks}
+
+        % 22
+        \item 下面代码运行的结果是?(\qquad)
+        \begin{lstlisting}
+            a = 1.27
+            print(eval('a+10'))
+        \end{lstlisting}
+        \begin{tasks}(4)
+            \task 1.2710
+            \task 系统报错
+            \task 11.27
+            \task 1.27+10
+        \end{tasks}
+
+        % 23
+        \item 使用哪个函数可以把字符串\lstinline!'123'!转换为整型123?(\qquad)
+        \begin{tasks}(4)
+            \task num()
+            \task str()
+            \task float()
+            \task int()
+        \end{tasks}
+
+        \newpage
+        % 24
+        \item 关于变量的说法，错误的是?(\qquad)
+        \begin{tasks}(2)
+            \task 变量必须要命名
+            \task 变量第二次复制后，第一次赋的值将被删除
+            \task 变量可以用来存储数字，也可以存储文字
+            \task 在同一个程序里，变量名能重复
+        \end{tasks}
+
+        % 25
+        \item 关于Python的编程环境，下列的哪个表述是不正确的?(\qquad)
+        \begin{tasks}
+            \task Python自带的编程环境是IDLE
+
+            \task 下载安装好Python软件后，无需单独下载IDLE
+
+            \task IDLE的交互编程环境中，可以一次写入多行无缩进的语句代码，然后进行运行 
+
+            \task 为了保存编写的代码，我们通常使用IDLE中的脚本式编程模式 
+        \end{tasks}
+    \end{enumerate}
+
+    {\noindent\heiti 第二部分、判断题(共 10 题,每题 2 分,共20分.)}
+    \begin{enumerate}
+        \setcounter{enumi}{25}
+        % 26
+        \item 运行下列Python代码后，a和b的数据类型均为字符串(\qquad)
+        \begin{lstlisting}
+            a = '5'
+            b = "b"
+        \end{lstlisting}
+
+        %27
+        \item 在turtle库中，画笔的起点在画布的正中央，\lstinline{turtle.goto()}、\lstinline{turtle.setx()} 和 \lstinline{turtle.sety()} 使用的都是基于中心点 $(0,0)$ 的绝对坐标(\qquad)
+        
+        %28
+        \item \lstinline{turtle.shape("square")} 命令可以将turtle形状设置为海龟(\qquad)
+  
+        %29
+        \item and 是Python中常用的保留字，不可以作为变量名(\qquad)
+        
+        %30
+        \item Python的IDLE编程中有交互模式和脚本模式两种编程方式(\qquad)
+        
+        %31
+        \item 程序：a=b中，a是变量，b是值(\qquad)
+        
+        %32
+        \item from, False, import, as 是Python中常用保留字，不可以作为变量名(\qquad)
+        
+        %33
+        \item \lstinline!input()!语句是用来输入一个指令(\qquad)
+        
+        %34
+        \item 以下代码运行后显示的结果是3(\qquad)
+        \begin{lstlisting}
+            b = 3
+            c = a + b
+            print(c)
+        \end{lstlisting}
+        
+        %35
+        \item Python代码的注释只有一种方式，那就是使用 \lstinline{#} 符号(\qquad)
+    \end{enumerate}
+
+    \newpage
+    {\noindent\heiti 第三部分、编程题(共 2 题,共30分.)}
+    \begin{enumerate}
+        \setcounter{enumi}{35}
+        
+        % 36
+        \item 龟兔赛跑:
+        
+        龟兔赛跑，兔子刚开始跑得非常快，但是兔子太骄傲了，在领先乌龟 $100$ 米时，自行休息睡着了，乌龟一步一步进行追赶，乌龟的速度是 $V\ \mathrm{m/s}(V<10)$，请计算出乌龟多长时间就可以追上兔子呢？要求：
+        \begin{tasks}[label=(\arabic*)]
+            \task 程序开始运行时，询问请输入乌龟爬行的速度，输入一个数字；
+            \task 程序根据输入的数字计算出乌龟需要多长时间就可以追上兔子；
+            \task 输出的格式为：“乌龟能够追上兔子所需的时间是：XX秒。”.(XX表示计算的结果)
+        \end{tasks}
+        \vfill
+
+        %37
+        \item 绘制如下图形：
+        
+        \begin{tasks}[label=(\arabic*)]
+            \task 画一个由一个正方形和一个菱形组成的图形，其中，正方形的边长为200像素，菱形的四个顶点均在正方形四条边的中点上；
+            \task 设置画笔速度为1；
+            \task 菱形的填充颜色为红色，所有线条为黑色；
+            \task 画图结束，隐藏并停止画笔.
+        \end{tasks}
+        \begin{center}
+            \includegraphics[width=.1\textwidth]{37.png}
+        \end{center}
+        \vfill
+    \end{enumerate}
+\end{document}
