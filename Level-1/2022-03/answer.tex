@@ -1,0 +1,114 @@
+\documentclass[11pt]{ctexart}
+
+\usepackage{geometry}
+\geometry{
+    left = 0.6in,
+    right = 0.6in,
+    top = 0.8in,
+    bottom = 1.0in
+}
+\usepackage{amssymb,amsbsy,amsmath,xcolor,mathrsfs,graphicx}
+\usepackage{listings}
+\usepackage{tasks}
+\settasks{
+    label = \Alph*. ,
+    label-width = 16pt
+}
+\lstset{
+    language = python,
+    keywordstyle = \color{orange}\bfseries,
+    emph = {
+        abs, all, any, ascii, bin, bool, breakpoint, bytearray, bytes,
+        callable, chr, classmethod, compile, complex, copyright, credits,
+        delattr, dict, dir, divmod, enumerate, eval, exec, exit, filter,
+        float, format, frozenset, getattr, globals, hasattr, hash,
+        help, hex, id, input, int, isinstance, issubclass, iter, len,
+        license, list, locals, map, max, memoryview, min, next, object,
+        oct, open, ord, pow, print, property, quit, range, repr, reversed,
+        round, set, setattr, slice, sorted, staticmethod, str, sum, super,
+        tuple, type, vars, zip,
+    },
+    emphstyle = \color{purple}\bfseries,
+    showspaces = false,
+    basicstyle = \ttfamily,
+    morekeywords = {True,False}
+}
+
+\begin{document}
+\begin{center}
+    \Huge \heiti 参考答案
+\end{center}
+
+    \begin{tasks}[label=\arabic*.](5)
+        \task C
+        \task D
+        \task D
+        \task B
+        \task D
+
+        \task D
+        \task C
+        \task B
+        \task D
+        \task A
+
+        \task B
+        \task C
+        \task B
+        \task A
+        \task C
+
+        \task C
+        \task C
+        \task C
+        \task B
+        \task C
+
+        \task B
+        \task D
+        \task C
+        \task D
+        \task C
+
+        \task $\checkmark$
+        \task $\times$
+        \task $\checkmark$
+        \task $\times$
+        \task $\checkmark$
+
+        \task $\checkmark$
+        \task $\times$
+        \task $\times$
+        \task $\times$
+        \task $\checkmark$
+    \end{tasks}
+
+\begin{enumerate}
+    \setcounter{enumi}{35}
+    \item 参考程序
+    \begin{lstlisting}
+        a = int(input())
+        b = int(input())
+        c = int(input())
+        print(a >= b * c)
+    \end{lstlisting}
+
+    \item 参考程序
+    \begin{lstlisting}
+        import turtle
+        turtle.pensize(10)
+        turtle.color('black', 'blue')
+        turtle.begin_fill()
+        turtle.circle(50)
+        turtle.end_fill()
+        turtle.forward(90)
+        turtle.left(120)
+        turtle.forward(180)
+        turtle.goto(0,0)
+        turtle.setheading(180)
+        turtle.forward(90)
+        turtle.right(120)
+        turtle.forward(180)
+    \end{lstlisting}
+\end{enumerate}
+\end{document}
