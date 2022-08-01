@@ -1,0 +1,425 @@
+\documentclass[11pt]{ctexart}
+
+\usepackage{geometry}
+\geometry{
+    left = 0.6in,
+    right = 0.6in,
+    top = 0.8in,
+    bottom = 1.0in
+}
+\usepackage{amssymb,amsbsy,amsmath,xcolor,mathrsfs,graphicx}
+\usepackage{listings}
+\usepackage{tasks}
+\settasks{
+    label = \Alph*. ,
+    label-width = 16pt
+}
+\pagestyle{empty}
+
+\renewcommand{\title}[3]{
+    \begin{center}
+        \Large\heiti 中国电子学会 #1~年~#2~月 Python~#3级考试
+    \end{center}
+}
+\newcommand{\TimeAndName}[1]{
+    \begin{center}
+        考试时间:~#1~ 分钟 \qquad\qquad\qquad\qquad 姓名:\underline{\quad\quad\quad\quad}
+    \end{center}
+}
+
+\begin{document}
+    \lstset{
+        language = python,
+        keywordstyle = \color{orange}\bfseries,
+        emph = {
+            abs, all, any, ascii, bin, bool, breakpoint, bytearray, bytes,
+            callable, chr, classmethod, compile, complex, copyright, credits,
+            delattr, dict, dir, divmod, enumerate, eval, exec, exit, filter,
+            float, format, frozenset, getattr, globals, hasattr, hash,
+            help, hex, id, input, int, isinstance, issubclass, iter, len,
+            license, list, locals, map, max, memoryview, min, next, object,
+            oct, open, ord, pow, print, property, quit, range, repr, reversed,
+            round, set, setattr, slice, sorted, staticmethod, str, sum, super,
+            tuple, type, vars, zip,
+        },
+        emphstyle = \color{purple}\bfseries,
+        showspaces = false,
+        basicstyle = \ttfamily,
+        morekeywords = {True,False}
+    }
+
+    \title{2020}{12}{二}
+    
+    \TimeAndName{60}
+    
+    {\noindent\heiti 第一部分、单选题(共 25 题,每题 2 分,共50分.)}
+
+    \begin{enumerate}
+        % 1
+        \item 执行以下代码中，输出的结果是？(\qquad)
+        \begin{lstlisting}
+            s = 0
+            for i in range(1,10,3):    
+                s = s + i
+                print(s, i)
+        \end{lstlisting}
+        \begin{tasks}(4)
+            \task 22 10
+            \task 12 7
+            \task 45 9
+            \task 55 10
+        \end{tasks}
+
+        % 2
+        \item 已知\lstinline!s=list("sgdhasdghasdg")!，以下选项中能输出字符"\lstinline{g}"出现的次数的是?(\qquad)
+        \begin{tasks}(2)
+            \task \lstinline{print(s.index(g))}
+            \task \lstinline{print(s.index("g"))}
+            \task \lstinline{print(s.count("g"))}
+            \task \lstinline{print(s.count(g))}
+        \end{tasks}
+
+        % 3
+        \item 下列代码的执行结果是？(\qquad)
+        \begin{lstlisting}
+            s1 = "abcde"
+            s2 = "fgh"
+            s3 = s1+s2
+            s3[4:7]
+        \end{lstlisting}
+        \begin{tasks}(4)
+            \task efg
+            \task efgh
+            \task def
+            \task defg
+        \end{tasks}
+
+        % 4
+        \item 以下代码的输出结果是？(\qquad)
+        \begin{lstlisting}
+            ls1 = [1,2,3,4,5]
+            ls2 = ls1 
+            ls2.reverse()
+            print(ls1)
+        \end{lstlisting}
+        \begin{tasks}(4)
+            \task \lstinline!5,4,3,2,1!
+            \task \lstinline![1,2,3,4,5]!
+            \task \lstinline![5,4,3,2,1]!
+            \task \lstinline!1,2,3,4,5!
+        \end{tasks}
+
+        % 5
+        \item  运行如下代码，结果是？(\qquad)
+        \begin{lstlisting}
+            l = ["a",1,"b",[1,2]]
+            print(len(l))
+        \end{lstlisting}
+        \begin{tasks}(4)
+            \task 3
+            \task 4
+            \task 5
+            \task 6
+        \end{tasks}
+
+        % 6
+        \item 以下代码的输出结果是？(\qquad)
+        \begin{lstlisting}
+            lis = list(range(4))
+            print(lis)
+        \end{lstlisting}
+        \begin{tasks}(4)
+            \task \lstinline![0,1,2,3,4]!
+            \task \lstinline![0,1,2,3]!
+            \task \lstinline!0,1,2,3!
+            \task \lstinline!0,1,2,3,4!
+        \end{tasks}
+
+        % 7
+        \item 下面代码的输出结果是?(\qquad)
+        \begin{lstlisting}
+            ls = ["橘子","芒果","草莓","西瓜","水蜜桃"]
+            for k in ls:    
+                print(k,end=" ")
+        \end{lstlisting}
+        \begin{tasks}(2)
+            \task \lstinline!橘子芒果草莓西瓜水蜜桃!
+            \task \lstinline!橘子\ 芒果\ 草莓\ 西瓜\ 水蜜桃!
+            \task \lstinline!西瓜!
+            \task \lstinline!"橘子""芒果""草莓""西瓜""水蜜桃"!
+        \end{tasks}
+
+        % 8
+        \item  关于 Python 中的流程控制语句，下列描述错误的是?(\qquad)
+        \begin{tasks}
+            \task 在分支结构中，\lstinline{if}、\lstinline{elif}、\lstinline{else} 都可以单独使用
+            \task 分支结构中的条件判断通常用关系表达式或逻辑表达式来进行描述
+            \task \lstinline{continue} 语句和 \lstinline{break} 语句只有在循环结构中才可以使用
+            \task \lstinline{while} 语句和 \lstinline{for} 语句的循环条件后都必须输入冒号，需要循环执行的语句必须有缩进
+        \end{tasks}
+
+        % 9
+        \item 已知有列表 \lstinline{a = [1,2,3,4,5]}，以下语句中，不能输出 \lstinline{[5,4,3,2,1]} 的是?(\qquad)
+        \begin{tasks}(2)
+            \task \lstinline!print(a[:-6:-1])!
+            \task \lstinline!print(a.sort(reverse=True))!
+            \task \lstinline!print(sorted(a, reverse=True))!
+            \task \lstinline!print([5,4,3,2,1])!
+        \end{tasks}
+
+        % 10
+        \item 已知列表 \lstinline{a=[1,2,3,4,5]}, 执行 \lstinline{a.insert(2,6)} 后结果是什么?(\qquad)
+        \begin{tasks}(4)
+            \task \lstinline![1,2,3,4,5,2,6]!
+            \task \lstinline![1,2,3,4,5,6]!
+            \task \lstinline![1,2,6,3,4,5]!
+            \task \lstinline![1,2,3,6,4,5]!
+        \end{tasks}
+
+        % 11
+        \item 下列选项中，不属于 Python 流程控制语句的是?(\qquad)
+        \begin{tasks}(4)
+            \task if-elif-else语句
+            \task while语句
+            \task do-while语句
+            \task for语句
+        \end{tasks}
+
+        % 12
+        \item 关于 Python 元组类型，以下选项中描述错误的是?(\qquad)
+        \begin{tasks}
+            \task 元组不可以被修改
+            \task Python 中元组使用圆括号和逗号表示
+            \task 元组中的元素要求是相同类型
+            \task 一个元组可以作为另一个元组的元素，可以采用多级索引获取信息
+        \end{tasks}
+
+        % 13
+        \item 设有元组\lstinline!tup=(1,2,3,'1','2','3')!，执行语句\lstinline!print(tup[0::2])!，得到的结果是?(\qquad)
+        \begin{tasks}(4)
+            \task \lstinline!(1,2)!
+            \task \lstinline!(1,3)!
+            \task \lstinline!(1,3,'2')!
+            \task \lstinline!(1,'1','3')!
+        \end{tasks}
+
+        % 14
+        \item  执行下列代码，输出的结果是?(\qquad)
+        \begin{lstlisting}
+            dic = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+            dic.pop('b')
+            del dic['d']
+            dic['d'] = 4
+            print(dic)
+        \end{lstlisting}
+        \begin{tasks}(2)
+            \task \lstinline!\{'a':1,'b':2,'c':3,'d':4\}!
+            \task \lstinline!\{'a':1,'c':3,'d':4\}!
+            \task \lstinline!\{'a':1,'c':3\}!
+            \task \lstinline!\{'d':4\}!
+        \end{tasks}
+        
+        % 15
+        \item 已知列表\lstinline!a=[1, 2,'3']!，执行语句\lstinline!print(a*2)!后，输出的结果是?(\qquad)
+        \begin{tasks}(4)
+            \task \lstinline![1,2,'3',1,2,'3']!
+            \task \lstinline![1,2,'3']!
+            \task \lstinline![2,4,'6']!
+            \task \lstinline![1,2,'3',2]!
+        \end{tasks}
+
+        % 16
+        \item 下列代码的运行结果是?(\qquad)
+        \begin{lstlisting}
+            a={'xm':'zhangsan'}
+            b={'sg':175,'tz':'55kg'}
+            b.update(a)
+            len(b)
+        \end{lstlisting}
+        \begin{tasks}(4)
+            \task 2
+            \task 3
+            \task 4
+            \task 6
+        \end{tasks}
+
+        % 17
+        \item 下面Python循环体执行的次数与其他不同的是?(\qquad)
+        \begin{tasks}(2)
+            \task \lstinline{i = 0}\\
+            \lstinline{while i <= 10:}\\
+            \lstinline{\ \ \ \ print(i)}\\
+            \lstinline{\ \ \ \ i = i + 1}
+            \task \lstinline{i = 10}\\
+            \lstinline{while i > 0:}\\
+            \lstinline{\ \ \ \ print(i)}\\
+            \lstinline{\ \ \ \ i = i - 1}
+            \task \lstinline{for i in range(10):}\\
+            \lstinline{\ \ \ \ print(i)}\\
+            \task \lstinline{for i in range(10, 0, -1):}\\
+            \lstinline{\ \ \ \ print(i)}\\
+        \end{tasks}
+
+        % 18
+        \item 下列属于列表的是?(\qquad)
+        \begin{tasks}(2)
+            \task \lstinline!str1 = "python"!
+            \task \lstinline!list1 = ['1','2','3']!
+            \task \lstinline!tup1 = ('1','2','3')!
+            \task \lstinline!dict1 = \{'a':1,'b':2,'c':3\}!
+        \end{tasks}
+
+        % 19
+        \item 已知\lstinline!t=(1,2,3,4,5,6)!,下面哪条元组操作是非法的？?(\qquad)
+        \begin{tasks}(4)
+            \task \lstinline!len(t)!
+            \task \lstinline!max(t)!
+            \task \lstinline!min(t)!
+            \task \lstinline!t[1]=8!
+        \end{tasks}
+
+        % 20
+        \item 已知字符串中的某个字符，要找到这个字符的位置，最简便的方法是?(\qquad)
+        \begin{tasks}(4)
+            \task 切片
+            \task 连接
+            \task 分割
+            \task 索引
+        \end{tasks}
+
+        % 21
+        \item 以下关于字典特性的描述正确的是?(\qquad)
+        \begin{tasks}
+            \task 字典支持位置索引
+            \task 字典是一种有序的对象集合
+            \task 字典中的数据可以进行切片
+            \task 字典里面的值（不是键）可以包含列表和其他数据类型
+        \end{tasks}
+
+        % 22
+        \item 在某学校，张三、李四、王五三名同学对应的学号分别是100、101、102。现将他们学号与姓名对应的关系存入字典 \lstinline{id_name} 中，关于以下代码段的描述，错误的是？(\qquad)
+        \begin{lstlisting}
+            id_name = {101: '张三', 102: '李四', 103: '王五'}
+            name_id = {}
+            name_id[id_name[101]] = 101
+            name_id[id_name[102]] = 102
+            name_id[id_name[103]] = 103
+            print(id_name == name_id)
+        \end{lstlisting}
+        \begin{tasks}
+            \task 在字典 \lstinline{id_name} 中，只能通过学号查找对应的姓名，不能通过姓名查找对应的学号
+            \task 上述代码是将 \lstinline{id_name} 中姓名作为键、学号作为值构建了一个新的字典 \lstinline{name_id}
+            \task 上述代码执行后，字典 \lstinline{name_id} 为: \lstinline!\{'张三': 101, '李四': 102, '王五': 103\}!
+            \task 上述代码输出的结果为: \lstinline!True!
+        \end{tasks}
+
+        % 23
+        \item 执行下面代码，结果是?(\qquad)
+        \begin{lstlisting}
+            for key in "lanxi":
+                if key == "x":        
+                    break    
+                print(key)
+        \end{lstlisting}
+        \begin{tasks}(4)
+            \task lanxi
+            \task lan
+            \task l\\a\\n
+            \task l\\a\\n\\i
+        \end{tasks}
+
+        % 24
+        \item 关于 \lstinline{break} 语句与 \lstinline{continue} 语句的说法中，以下选项中错误的是?(\qquad)
+        \begin{tasks}
+            \task \lstinline{continue} 语句类似于 \lstinline{break} 语句，也必须在 \lstinline{for}、\lstinline{while} 循环中使用
+            \task \lstinline{break} 语句结束循环，继续执行循环语句的后续语句
+            \task 当多个循环语句嵌套时，\lstinline{break} 语句只适用于当前嵌套层的语句
+            \task \lstinline{continue} 语句结束循环，继续执行循环语句的后续语句
+        \end{tasks}
+
+        % 25
+        \item 对\lstinline!s="www.baidu.com"!执行\lstinline!s.split(".")!后的结果是什么?(\qquad)
+        \begin{tasks}(2)
+            \task \lstinline!www.baidu.com!
+            \task \lstinline!['www','baidu','com']!
+            \task \lstinline!"www.baidu.com"!
+            \task \lstinline!wwwbaiducom!
+        \end{tasks}
+    \end{enumerate}
+
+    {\noindent\heiti 第二部分、判断题(共 10 题,每题 2 分,共20分.)}
+    \begin{enumerate}
+        \setcounter{enumi}{25}
+        % 26
+        \item 执行以下代码，输入数字99，运行结果是：ok(\qquad)
+        \begin{lstlisting}
+            a=input('输入一个数字：') 
+            if a<100:     
+                print('ok')
+        \end{lstlisting}
+
+        %27
+        \item 在 Python 中 \lstinline!for item in range(1,10,2)!表示的是从1循环到10（包括10）步长是2(\qquad)
+        
+        %28
+        \item \lstinline!d=()!，\lstinline{d} 是一个空列表.(\qquad)
+  
+        %29
+        \item 在使用 \lstinline{del} 语句删除字典中不需要的元素时，必须指定字典名和要删除的键.(\qquad)
+        
+        %30
+        \item 判断下面的语句是否正确.(\qquad)
+        \begin{lstlisting}
+            >>> a="Hello"-"World"
+            >>> a
+            >>> 'Hello World'
+        \end{lstlisting}
+        
+        %31
+        \item 在Python中\lstinline!range()!,表示一个整数序列，对于浮点型和字符串类型是无效的.(\qquad)
+        
+        %32
+        \item 元组的访问速度比列表要快一些，如果定义了一系列常量值，并且主要用途仅仅是对其进行遍历而不需要进行任何修改，建议使用元组而不使用列表.(\qquad)
+        
+        %33
+        \item 元组是用方括号来表示的，列表是用圆括号来表示的.(\qquad)
+        
+        %34
+        \item 运行如下代码的结果为 \lstinline!"今天是3月25日，星期三，天气晴好"!.(\qquad)
+        \begin{lstlisting}
+            print('今天是%d月%d日，星期%s，天气%s'%(3,25,'三','晴好'))
+        \end{lstlisting}
+        
+        %35
+        \item \lstinline{for} 循环适合已知循环次数的操作，\lstinline{while} 循环适合未知循环次数的操作.(\qquad)
+    \end{enumerate}
+
+    {\noindent\heiti 第三部分、编程题(共 2 题,共30分.)}
+    \begin{enumerate}
+        \setcounter{enumi}{35}
+        
+        % 36
+        \item 成绩等级:(10分)
+        
+        编写一段代码，要求如下：
+        \begin{tasks}[label=\arabic*.]
+            \task 程序开始运行后，需要用户输入学生的成绩（成绩为正整数）
+            \task 一次输入一个学生的成绩，学生成绩是从0到100
+            \task 根据用户输入的成绩，程序依据等级标准，输出相应的等级
+            \task 等级标准是成绩小于60为不及格，60（含）到85（不含）之间为良，85（含）以上为优
+            \task 可以重复输入成绩进行查询
+        \end{tasks}
+        \vfill
+
+        %37
+        \item 剔除数字:
+        
+        要求如下:
+        \begin{tasks}[label=\arabic*.]
+            \task 编写一段程序代码，程序运行后，需要用户随意输入一段包含有数字和字母的字符串
+            \task 程序会自动删除字符串中的数字，然后输出一串没有数字的字符串（纯字母的字符串）或者列表（没有数字）
+            \task 要求输出的非数字的字符顺序不能变
+        \end{tasks}
+        \vfill
+    \end{enumerate}
+\end{document}
