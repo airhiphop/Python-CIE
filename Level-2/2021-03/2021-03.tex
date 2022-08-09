@@ -1,0 +1,452 @@
+\documentclass[11pt]{ctexart}
+
+\usepackage{geometry}
+\geometry{
+    left = 0.6in,
+    right = 0.6in,
+    top = 0.8in,
+    bottom = 1.0in
+}
+\usepackage{amssymb,amsbsy,amsmath,xcolor,mathrsfs,graphicx}
+\usepackage{listings}
+\usepackage{tasks}
+\settasks{
+    label = \Alph*. ,
+    label-width = 16pt
+}
+\pagestyle{empty}
+
+\renewcommand{\title}[3]{
+    \begin{center}
+        \Large\heiti 中国电子学会 #1~年~#2~月 Python~#3级考试
+    \end{center}
+}
+\newcommand{\TimeAndName}[1]{
+    \begin{center}
+        考试时间:~#1~ 分钟 \qquad\qquad\qquad\qquad 姓名:\underline{\quad\quad\quad\quad}
+    \end{center}
+}
+
+\begin{document}
+    \lstset{
+        language = python,
+        keywordstyle = \color{orange}\bfseries,
+        emph = {
+            abs, all, any, ascii, bin, bool, breakpoint, bytearray, bytes,
+            callable, chr, classmethod, compile, complex, copyright, credits,
+            delattr, dict, dir, divmod, enumerate, eval, exec, exit, filter,
+            float, format, frozenset, getattr, globals, hasattr, hash,
+            help, hex, id, input, int, isinstance, issubclass, iter, len,
+            license, list, locals, map, max, memoryview, min, next, object,
+            oct, open, ord, pow, print, property, quit, range, repr, reversed,
+            round, set, setattr, slice, sorted, staticmethod, str, sum, super,
+            tuple, type, vars, zip,
+        },
+        emphstyle = \color{purple}\bfseries,
+        showspaces = false,
+        basicstyle = \ttfamily,
+        morekeywords = {True,False}
+    }
+
+    \title{2021}{3}{二}
+    
+    \TimeAndName{60}
+    
+    {\noindent\heiti 第一部分、单选题(共 25 题,每题 2 分,共50分.)}
+
+    \begin{enumerate}
+        % 1
+        \item 对于字典 \lstinline!infor = {"name":"tom", "age":13, "sex":"male"}!，删除 \lstinline!"age":13! 键值对的操作正确的是？(\qquad)
+        \begin{tasks}(2)
+            \task \lstinline!del infor['age']!
+            \task \lstinline!del infor['age':13]!
+            \task \lstinline!del infor!
+            \task \lstinline!infor.clear()!
+        \end{tasks}
+
+        % 2
+        \item 用Python语句计算:长方形的长和宽分别为4和5，则长方形的周长为?(\qquad)
+        \begin{tasks}(4)
+            \task \lstinline!a=4!\\\lstinline!b=5!\\\lstinline!c=2*a+2*b!\\\lstinline!print(c)!
+            \task \lstinline!a=4!\\\lstinline!b=5!\\\lstinline!c=2*a+b!\\\lstinline!print(c)!
+            \task \lstinline!a=4!\\\lstinline!b=5!\\\lstinline!c=a*b!\\\lstinline!print(c)!
+            \task \lstinline!a=4!\\\lstinline!b=5!\\\lstinline!c=a+b*2!\\\lstinline!print(c)!
+        \end{tasks}
+
+        % 3
+        \item 下列代码输出结果是？(\qquad)
+        \begin{lstlisting}
+            ist1 = ['A','&','A',8,'A']
+            list1.remove('A')
+            print(list1)
+        \end{lstlisting}
+        \begin{tasks}(4)
+            \task \lstinline!['A','&','A',8]!
+            \task \lstinline!['&','A','8',A]!
+            \task \lstinline!['&',8]!
+            \task \lstinline!['A','&',8,'A']!
+        \end{tasks}
+
+        % 4
+        \item 数学课代表将同学们的数学成绩存放在列表 \lstinline{s1} 中，\lstinline!s1=[99,92,87,90,100,95]!，如果按照成绩由低到高输出，以下哪个程序可以实现？(\qquad)
+        \begin{tasks}(2)
+            \task \lstinline!s1 = [99,92,87,90,100,95]!\\\lstinline!s2 = sorted(s1)!\\\lstinline!print(s2)!
+            \task \lstinline!s1 = [99,92,87,90,100,95]!\\\lstinline!s2 = sort()!\\\lstinline!print(s2)!
+            \task \lstinline!s1 = [99,92,87,90,100,95]!\\\lstinline!sort(reverse=True)!\\\lstinline!print(s1)!
+            \task \lstinline!s1 = [99,92,87,90,100,95]!\\\lstinline!s2 = sorted(s1, reverse=True)!\\\lstinline!print(s2)!
+        \end{tasks}
+
+        % 5
+        \item  执行下列语句，将输出？(\qquad)
+        \begin{lstlisting}
+            >>> list1=['b','c',1,2,3,4,5] 
+            >>> list1.append('a') 
+            >>> list1
+        \end{lstlisting}
+        \begin{tasks}(2)
+            \task \lstinline!['b','c',1,2,3,4,5,'a']!
+            \task 无任何输出
+            \task \lstinline{b}
+            \task \lstinline!['b','c',1,2,3,4,5]!
+        \end{tasks}
+
+        \newpage
+        % 6
+        \item 已知 \lstinline!t=(88,77,95,64,85)!，那么 \lstinline!t[1:3]! 的结果是?(\qquad)
+        \begin{tasks}(4)
+            \task \lstinline![88,77]!
+            \task \lstinline!(88,77)!
+            \task \lstinline!(77,95)!
+            \task \lstinline![77,95]!
+        \end{tasks}
+
+        % 7
+        \item 我们可以定义一个字典 \lstinline{week1},用数字 $1\sim 7$ 表示中文的星期一到星期日（如1表示星期一），正确的语句是？(\qquad)
+        \begin{tasks}
+            \task \footnotesize \lstinline!week1 = (1:"星期一",2:"星期二",3:"星期三",4:"星期四",5:"星期五",6:"星期六",7:"星期日")!
+            \task \footnotesize \lstinline!week1 = [1:"星期一",2:"星期二",3:"星期三",4:"星期四",5:"星期五",6:"星期六",7:"星期日"]!
+            \task \footnotesize \lstinline!week1 = \{'1':"星期一",'2':"星期二",'3':"星期三",'4':"星期四",'5':"星期五",'6':"星期六",'7':"星期日"\}!
+            \task \footnotesize \lstinline!week1 = \{1:"星期一",2:"星期二",3:"星期三",4:"星期四",5:"星期五",6:"星期六",7:"星期日"\}!
+        \end{tasks}
+
+        % 8
+        \item  下列不会产生死循环的程序是?(\qquad)
+        \begin{tasks}(2)
+            \task \lstinline{i = 1}\\
+            \lstinline{while True:}\\
+            \lstinline{\ \ \ \ i += 1}\\
+            \lstinline{\ \ \ \ if i \% 2 == 0:}\\
+            \lstinline{\ \ \ \ \ \ \ \ continue}\\
+            \lstinline{\ \ \ \ print(i)}
+
+            \task \lstinline{i = 1}\\
+            \lstinline{while True:}\\
+            \lstinline{\ \ \ \ if i \% 2 == 0:}\\
+            \lstinline{\ \ \ \ \ \ \ \ continue}\\
+            \lstinline{\ \ \ \ print(i)}
+
+            \task \lstinline{i = 0}\\
+            \lstinline{while True:}\\
+            \lstinline{\ \ \ \ i += 1}\\
+            \lstinline{\ \ \ \ if i == 100:}\\
+            \lstinline{\ \ \ \ \ \ \ \ break}\\
+            \lstinline{\ \ \ \ print(i)}
+
+            \task \lstinline{i = 1}\\
+            \lstinline{while i == 1:}\\
+            \lstinline{\ \ \ \ print(i)}
+        \end{tasks}
+
+        % 9
+        \item 下列程序运行完成时，\lstinline{i} 的值为?(\qquad)
+        \begin{lstlisting}
+            for i in "I enjoy coding.":
+                if i == "c":
+                    break
+                print(i, end="")
+        \end{lstlisting}
+        \begin{tasks}(4)
+            \task \lstinline!'o'!
+            \task \lstinline!'c'!
+            \task \lstinline!"I enjoy"!
+            \task \lstinline!''!
+        \end{tasks}
+
+        % 10
+        \item  语句 \lstinline!list6=[0,6]! 的含义是?(\qquad)
+        \begin{tasks}(2)
+            \task 定义一个变量 \lstinline{list6},值为 $0\sim 6$ 之间的随机值
+            \task 定义一个变量 \lstinline{list6},值为0.6
+            \task 定义一个列表 \lstinline{list6},包含两个元素:0和6
+            \task 生成一个数字序列 \lstinline{list6}，值为0到6
+        \end{tasks}
+
+        \newpage
+        % 11
+        \item 有如下Python程序段：
+        \begin{lstlisting}
+            x = 10
+            y = 5
+            if x/y == x//y:    
+                print("相等")
+            else:    
+                print("不相等")
+        \end{lstlisting}
+        执行程序段后，输出的结果是？(\qquad)
+        \begin{tasks}(4)
+            \task \lstinline{"相等"}
+            \task \lstinline{"不相等"}
+            \task \lstinline!相等!
+            \task \lstinline!不相等!
+        \end{tasks}
+
+        % 12
+        \item  下列代码的输出结果是？(\qquad)
+        \begin{lstlisting}
+            lis=list(range(5))
+            print(lis)
+        \end{lstlisting}
+        \begin{tasks}(4)
+            \task \lstinline!0,1,2,3,4,5!
+            \task \lstinline![0,1,2,3,4]!
+            \task \lstinline!0,1,2,3,4!
+            \task \lstinline![0,1,2,3,4,5]!
+        \end{tasks}
+
+        % 13
+        \item  执行下列语句，将输出?(\qquad)
+        \begin{lstlisting}
+            >>> x = [1,2,3,4,5]
+            >>> y = [2,3,5]
+            >>> z.append(x[1]*y[2])
+            >>> z
+        \end{lstlisting}
+        \begin{tasks}(4)
+            \task \lstinline!x[1]*y[2]!
+            \task \lstinline!25!
+            \task \lstinline![3]!
+            \task \lstinline![10]!
+        \end{tasks}
+
+        % 14
+        \item 下列程序的运行结果是?(\qquad)
+        \begin{lstlisting}
+            a = 1
+            if a > 0:
+                a = a + 1
+            if a > 1:
+                a = 5
+            print(a)
+        \end{lstlisting}
+        \begin{tasks}(4)
+            \task 1
+            \task 2
+            \task 5
+            \task 0
+        \end{tasks}
+        
+        % 15
+        \item 已知字符串 \lstinline!st='Python'!，执行语句 \lstinline!x=a[::2]! 后，变量 \lstinline{x} 的值为?(\qquad)
+        \begin{tasks}(4)
+            \task \lstinline!'Pyt'!
+            \task \lstinline!'Py'!
+            \task \lstinline!'yhn'!
+            \task \lstinline!'Pto'!
+        \end{tasks}
+
+        % 16
+        \item 已知\lstinline!a="1"!，\lstinline!b="2"!，则表达式 \lstinline{a + b} 的值为?(\qquad)
+        \begin{tasks}(4)
+            \task 3
+            \task 12
+            \task '12'
+            \task '21'
+        \end{tasks}
+
+        % 17
+        \item 运行如下代码后的值为?(\qquad)
+        \begin{lstlisting}
+            list1 = [1,3,4]
+            list2 = [3,5,2]
+            (list1 + list2)*2
+        \end{lstlisting}
+        \begin{tasks}(2)
+            \task \lstinline![8,16,12]!
+            \task \lstinline![1,3,4,3,5,2,1,3,4,3,5,2]!
+            \task \lstinline![1,3,4,1,3,4,3,5,2,3,5,2]!
+            \task \lstinline![2,6,8,6,10,4]!
+        \end{tasks}
+
+        % 18
+        \item 下列代码输出结果是?(\qquad)
+        \begin{lstlisting}
+            ls=['python','2021']
+            print(type(ls))
+        \end{lstlisting}
+        \begin{tasks}(4)
+            \task \lstinline!<class 'dict'>!
+            \task \lstinline!<class 'set'>!
+            \task \lstinline!<class 'list'>!
+            \task \lstinline!<class 'tuple'>!
+        \end{tasks}
+
+        % 19
+        \item 已知 \lstinline!t = (2,3,5,7,9)!,下列哪条指令可以求元组数据的和?(\qquad)
+        \begin{tasks}(4)
+            \task \lstinline!len(t)!
+            \task \lstinline!min(t)!
+            \task \lstinline!max(t)!
+            \task \lstinline!sum(t)!
+        \end{tasks}
+
+        % 20
+        \item 已知变量\lstinline!stra="IloveTX"!，执行语句 \lstinline!print("love" in stra")! 的结果为?(\qquad)
+        \begin{tasks}(4)
+            \task \lstinline!True!
+            \task \lstinline!False!
+            \task 1
+            \task 0
+        \end{tasks}
+
+        % 21
+        \item 有如下 Python 程序段：
+        \begin{lstlisting}
+            lista = [1,2,3,4,5,6,7,8,9,10]
+            s = 0
+            for i in range(0,len(lista),2):    
+                s = s+lista[i]
+            print("s=",s)
+        \end{lstlisting}
+        执行程序段后，输出的结果为？(\qquad)
+        \begin{tasks}(4)
+            \task 25
+            \task \lstinline!s=25!
+            \task \lstinline!s=30!
+            \task \lstinline!s=55!
+        \end{tasks}
+
+        \newpage
+        % 22
+        \item 运行下列程序语句后，字典 \lstinline{a} 是空值的是?(\qquad)
+        \begin{tasks}
+            \task \lstinline!a = \{'职业':'警察','年龄':25:'姓名':'李四'\}!\\
+                  \lstinline!a.clear()!
+            \task \lstinline!a = \{'职业':'警察','年龄':25:'姓名':'李四'\}!\\
+                  \lstinline!c = \{'职业':'教师'\}!\\       
+                  \lstinline!a.clear()!
+            \task \lstinline!a = \{'职业':'警察','年龄':25:'姓名':'李四'\}!\\
+                  \lstinline!del a['职业']!
+            \task \lstinline!a = \{'职业':'警察','年龄':25:'姓名':'李四'\}!\\
+                  \lstinline!a.popitem()!
+        \end{tasks}
+
+        % 23
+        \item 下列程序的运行结果是?(\qquad)
+        \begin{lstlisting}
+            L = [1,2,3,4,5,2,1]
+            L.pop(3)
+            L.pop(2)
+            print(L)
+        \end{lstlisting}
+        \begin{tasks}(4)
+            \task \lstinline![1,2,4,5,1]!
+            \task \lstinline![1,2,3,5,2]!
+            \task \lstinline![1,2,5,2,1]!
+            \task \lstinline![1,2,3,5,1]!
+        \end{tasks}
+
+        % 24
+        \item 有如下Python程序段：
+        \begin{lstlisting}
+            tup1 = (1,2,3,4,5)
+            x = tup1[1]+tup1[-1]
+            print("x=",x)
+        \end{lstlisting}
+        执行上述程序段后，输出的结果为？(\qquad)
+        \begin{tasks}(4)
+            \task 3
+            \task \lstinline!x=3!
+            \task 7
+            \task \lstinline!x=7!
+        \end{tasks}
+
+        % 25
+        \item 下列程序运行的结果是？(\qquad)
+        \begin{lstlisting}
+            infor = {"name":"tom", "age":13, "sex":"male"}
+            print(len(infor))
+        \end{lstlisting}
+        \begin{tasks}(4)
+            \task 6
+            \task 3
+            \task 4
+            \task 1
+        \end{tasks}
+    \end{enumerate}
+
+    \newpage
+    {\noindent\heiti 第二部分、判断题(共 10 题,每题 2 分,共20分.)}
+    \begin{enumerate}
+        \setcounter{enumi}{25}
+        % 26
+        \item 下列程序的输出结果是\lstinline!('A','p','p,'l','e')!.(\qquad)
+        \begin{lstlisting}
+            vowels = ('a','p','p,'l','e')
+            vowels[0] = 'A'
+            print(vowels)
+        \end{lstlisting}
+
+        %27
+        \item Python语句的循环结构中 \lstinline{for} 循环是条件循环.(\qquad)
+        
+        %28
+        \item 字典中的元素称为键值对，包括一个键和一个值，键和值中间用逗号隔开.(\qquad)
+  
+        %29
+        \item 在循环语句中 \lstinline{break} 语句的作用是提前结束所有循环.(\qquad)
+        
+        %30
+        \item 若 \lstinline!s='春眠不觉晓，处处闻啼鸟。'!，则 \lstinline!s[2:4]! 的值是 \lstinline{'不觉'}.(\qquad)
+        
+        %31
+        \item 元组是可变的，可以通过下标索引访问元素.(\qquad)
+        
+        %32
+        \item \lstinline!"好好学习" + "天天向上"! 的输出结果是 \lstinline!"好好学习""天天向上"!.(\qquad)
+        
+        %33
+        \item 当使用循环时，有时候在满足某个条件时，想要退出循环，我们可以使用 \lstinline!break! 语句.(\qquad)
+        
+        %34
+        \item 程序设计的三种基本结构为:顺序结构、选择结构和分支结构(\qquad)
+        
+        %35
+        \item \lstinline!count()! 方法用于统计某个元素在列表中出现的次数.(\qquad)
+    \end{enumerate}
+
+    {\noindent\heiti 第三部分、编程题(共 2 题,共30分.)}
+    \begin{enumerate}
+        \setcounter{enumi}{35}
+        
+        % 36
+        \item 设计一个停车场收费计算器（收费规则，2小时以内收费5元，超出部分每小时加收2元），要求如下：
+        
+        \begin{tasks}[label=(\arabic*)]
+            \task 设计的程序要能输入停车时间（单位为小时，输入的小时数为整数）
+            \task 程序可以根据输入的停车时间自动计算出停车费，并且显示出来
+            \task 程序可以重复使用
+        \end{tasks}
+        \vfill
+
+        %37
+        \item 用户输入一个半径r，求该半径下的圆的面积s与周长c。要求如下
+        
+        \begin{tasks}[label=\arabic*.]
+            \task 输出的面积与周长都保留俩位小数
+            \task 输出的格式为：\lstinline!“圆的周长是**，面积是**”!
+            \task $\pi$取3.14
+            \task 使用 \lstinline!print()! 格式化输出(\% 方法)
+        \end{tasks}
+        \vfill
+    \end{enumerate}
+\end{document}

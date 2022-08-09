@@ -1,0 +1,108 @@
+\documentclass[11pt]{ctexart}
+
+\usepackage{geometry}
+\geometry{
+    left = 0.6in,
+    right = 0.6in,
+    top = 0.8in,
+    bottom = 1.0in
+}
+\usepackage{amssymb,amsbsy,amsmath,xcolor,mathrsfs,graphicx}
+\usepackage{listings}
+\usepackage{tasks}
+\settasks{
+    label = \Alph*. ,
+    label-width = 16pt
+}
+\lstset{
+    language = python,
+    keywordstyle = \color{orange}\bfseries,
+    emph = {
+        abs, all, any, ascii, bin, bool, breakpoint, bytearray, bytes,
+        callable, chr, classmethod, compile, complex, copyright, credits,
+        delattr, dict, dir, divmod, enumerate, eval, exec, exit, filter,
+        float, format, frozenset, getattr, globals, hasattr, hash,
+        help, hex, id, input, int, isinstance, issubclass, iter, len,
+        license, list, locals, map, max, memoryview, min, next, object,
+        oct, open, ord, pow, print, property, quit, range, repr, reversed,
+        round, set, setattr, slice, sorted, staticmethod, str, sum, super,
+        tuple, type, vars, zip,
+    },
+    emphstyle = \color{purple}\bfseries,
+    showspaces = false,
+    basicstyle = \ttfamily,
+    morekeywords = {True,False}
+}
+
+\begin{document}
+\begin{center}
+    \Huge \heiti 参考答案
+\end{center}
+
+    \begin{tasks}[label=\arabic*.](5)
+        \task A
+        \task A
+        \task B
+        \task A
+        \task A
+
+        \task C
+        \task D
+        \task C
+        \task B
+        \task C
+
+        \task C
+        \task B
+        \task D
+        \task C
+        \task D
+
+        \task C
+        \task B
+        \task C
+        \task D
+        \task A
+
+        \task B
+        \task A
+        \task C
+        \task D
+        \task B
+
+        \task $\times$
+        \task $\times$
+        \task $\checkmark$
+        \task $\times$
+        \task $\checkmark$
+
+        \task $\times$
+        \task $\checkmark$
+        \task $\checkmark$
+        \task $\times$
+        \task $\checkmark$
+    \end{tasks}
+
+\begin{enumerate}
+    \setcounter{enumi}{35}
+    \item 参考程序
+    \begin{lstlisting}
+        while True:
+            hours = int(input())
+            money = 0
+            if hours <= 2:
+                money = 5
+            elif hours > 2:
+                money = 5 + 2*(hours-2)
+            print(money)
+    \end{lstlisting}
+
+    \item 参考程序
+    \begin{lstlisting}
+        radius = float(input())
+        area = radius*radius*3.14
+        perimeter = 6.28*radius
+        print("圆的周长是%.2f,面积是%.2f"%(perimeter, area))
+    \end{lstlisting}
+\end{enumerate}
+\end{document}
